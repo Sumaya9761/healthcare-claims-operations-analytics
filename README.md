@@ -38,3 +38,40 @@ The final Power BI report analyzes the 2021–2025 reporting period across three
 
 ### 3. Clinical & Service Drivers
 ![Clinical & Service Drivers](screenshots/clinical-service-drivers.png)
+
+## Key Business Insights & Recommendations
+
+### 1. A small group of members accounts for a large share of costs
+The top 10% of members were responsible for about 44% of total claim charges. This shows that healthcare spending in the dataset is concentrated among a relatively small number of members.
+
+**Recommendation:** Look more closely at high-cost and high-utilization members to understand whether repeated visits, specific services, or certain conditions are driving their costs.
+
+### 2. Monthly claim costs vary quite a bit
+Claim charges changed noticeably from month to month between 2021 and 2025, with some months showing clear cost spikes.
+
+**Recommendation:** Review the highest-cost months in more detail and break them down by member, provider, payer, and service type to understand what caused the increase.
+
+### 3. A few payers account for most claim charges
+Medicaid and Medicare had the highest primary-payer claim charges, followed by Humana and Blue Cross Blue Shield.
+
+**Recommendation:** Compare payer-level membership, utilization, PMPM, and service use to see whether higher costs are mainly related to having more members or higher utilization per member.
+
+### 4. High provider volume does not always mean high average cost
+Some providers had high average claim costs even with lower claim volumes, while some high-volume providers had relatively lower average costs.
+
+**Recommendation:** Provider performance should be reviewed using both cost and volume instead of relying on one metric alone. Higher costs should also be considered alongside utilization patterns and case mix.
+
+### 5. Most encounters were ambulatory
+Out of 2,670 encounters, 1,562 were ambulatory visits. Emergency visits totaled 118, while inpatient visits were much less common at 20.
+
+**Recommendation:** Since most utilization occurs in ambulatory settings, this area would be important for operational planning. Emergency and inpatient use should still be monitored for unusual or high-utilization patterns.
+
+### 6. The most common procedures are not always the most expensive
+Depression screening had the highest procedure volume, but other services such as fetal auscultation, uterine fundal evaluation, and subcutaneous immunotherapy contributed more to total procedure base cost.
+
+**Recommendation:** Procedure performance should be viewed from both a volume and cost perspective because the most frequently used services are not always the biggest cost drivers.
+
+### 7. The 35–49 age group had the highest encounter volume
+The 35–49 age group had 787 encounters, which was the highest among the age groups in the analysis.
+
+**Recommendation:** Looking at the conditions and procedures used by this age group could help explain what is driving their higher utilization.

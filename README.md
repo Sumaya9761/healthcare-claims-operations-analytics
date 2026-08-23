@@ -28,3 +28,13 @@ The final Power BI report analyzes the 2021–2025 reporting period across three
 ## Data Pipeline
 
 `Synthea CSV Data → PostgreSQL Raw Layer → Staging Layer → Analytics Star Schema → Business Views → Power BI Dashboard`
+## Power BI Dashboard
+
+### 1. Executive Overview
+![Executive Overview](screenshots/executive-overview.png)
+
+### 2. Provider & Utilization Analysis
+![Provider & Utilization Analysis](screenshots/provider-utilization.png)
+
+### 3. Clinical & Service Drivers
+![Clinical & Service Drivers](screenshots/clinical-service-drivers.png)

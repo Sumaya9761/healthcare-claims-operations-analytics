@@ -75,3 +75,41 @@ Depression screening had the highest procedure volume, but other services such a
 The 35–49 age group had 787 encounters, which was the highest among the age groups in the analysis.
 
 **Recommendation:** Looking at the conditions and procedures used by this age group could help explain what is driving their higher utilization.
+
+## Methodology
+
+The project follows a layered analytics workflow:
+
+1. Raw Synthea healthcare CSV files were loaded into PostgreSQL.
+2. A staging layer was created to clean data types, standardize fields, and validate keys and relationships.
+3. An analytics star schema was built using member, date, provider, organization, and payer dimensions with claims, encounters, procedures, and conditions as fact tables.
+4. Business-focused SQL views were created for cost, utilization, provider, payer, member, condition, and procedure analysis.
+5. Power BI was connected to the PostgreSQL analytics layer using Import mode.
+6. DAX measures and interactive visuals were used to build a three-page dashboard covering the 2021–2025 reporting period.
+
+## Limitations
+
+- The project uses synthetic Synthea healthcare data, so the findings should not be interpreted as real population-level healthcare trends.
+- Procedure base cost represents the source procedure cost field and should not be interpreted as actual claim reimbursement.
+- Conditions were not assigned claim costs because multiple conditions can be associated with the same encounter, which could lead to double counting.
+- Payer analysis is based on the primary payer assigned to each claim.
+- Provider cost differences are descriptive and should not be interpreted as indicators of fraud or quality without additional clinical and case-mix information.
+- The readmission metric developed in SQL is a simple operational 30-day proxy and is not a CMS readmission measure.
+
+## Repository Structure
+
+```text
+healthcare-claims-operations-analytics/
+│
+├── sql/
+│   └── healthcare_claims_analytics.sql
+│
+├── powerbi/
+│   └── Healthcare_Claims_Operations_Analytics.pbix
+│
+├── screenshots/
+│   ├── executive-overview.png
+│   ├── provider-utilization.png
+│   └── clinical-service-drivers.png
+│
+└── README.md
